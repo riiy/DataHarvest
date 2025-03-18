@@ -3,6 +3,8 @@
 
 cmake_minimum_required(VERSION 3.14...3.22)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 project(BuildAll LANGUAGES CXX)
 
 include(../cmake/tools.cmake)
