@@ -2,23 +2,23 @@
 
 #include <string>
 
-namespace snctp {
+namespace dataharvest {
 
-  /**  Language codes to be used with the SNCTP class */
+  /**  Language codes to be used with the DataHarvest class */
   enum class LanguageCode { EN, DE, ES, FR };
 
   /**
    * @brief A class for saying hello in multiple languages
    */
-  class SNCTP {
+  class DataHarvest {
     std::string name;
 
   public:
     /**
-     * @brief Creates a new snctp
+     * @brief Creates a new dataharvest
      * @param name the name to greet
      */
-    SNCTP(std::string name);
+    DataHarvest(std::string name);
 
     /**
      * @brief Creates a localized string containing the greeting
@@ -28,4 +28,4 @@ namespace snctp {
     std::string greet(LanguageCode lang = LanguageCode::EN) const;
   };
 
-}  // namespace snctp
+}  // namespace dataharvest

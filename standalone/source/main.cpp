@@ -1,5 +1,5 @@
-#include <snctp/snctp.h>
-#include <snctp/version.h>
+#include <dataharvest/dataharvest.h>
+#include <dataharvest/version.h>
 
 #include <cxxopts.hpp>
 #include <iostream>
@@ -7,11 +7,11 @@
 #include <unordered_map>
 
 auto main(int argc, char** argv) -> int {
-  const std::unordered_map<std::string, snctp::LanguageCode> languages{
-      {"en", snctp::LanguageCode::EN},
-      {"de", snctp::LanguageCode::DE},
-      {"es", snctp::LanguageCode::ES},
-      {"fr", snctp::LanguageCode::FR},
+  const std::unordered_map<std::string, dataharvest::LanguageCode> languages{
+      {"en", dataharvest::LanguageCode::EN},
+      {"de", dataharvest::LanguageCode::DE},
+      {"es", dataharvest::LanguageCode::ES},
+      {"fr", dataharvest::LanguageCode::FR},
   };
 
   cxxopts::Options options(*argv, "A program to welcome the world!");
@@ -36,7 +36,7 @@ auto main(int argc, char** argv) -> int {
   }
 
   if (result["version"].as<bool>()) {
-    std::cout << "SNCTP, version " << SNCTP_VERSION << std::endl;
+    std::cout << "DataHarvest, version " << DATAHARVEST_VERSION << std::endl;
     return 0;
   }
 
@@ -46,8 +46,8 @@ auto main(int argc, char** argv) -> int {
     return 1;
   }
 
-  snctp::SNCTP snctp(name);
-  std::cout << snctp.greet(langIt->second) << std::endl;
+  dataharvest::DataHarvest dataharvest(name);
+  std::cout << dataharvest.greet(langIt->second) << std::endl;
 
   return 0;
 }

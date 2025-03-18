@@ -1,11 +1,11 @@
 #include <fmt/format.h>
-#include <snctp/snctp.h>
+#include <dataharvest/dataharvest.h>
 
-using namespace snctp;
+using namespace dataharvest;
 
-SNCTP::SNCTP(std::string _name) : name(std::move(_name)) {}
+DataHarvest::DataHarvest(std::string _name) : name(std::move(_name)) {}
 
-std::string SNCTP::greet(LanguageCode lang) const {
+std::string DataHarvest::greet(LanguageCode lang) const {
   switch (lang) {
     default:
     case LanguageCode::EN:
