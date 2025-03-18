@@ -1,6 +1,6 @@
-#include <doctest/doctest.h>
 #include <dataharvest/dataharvest.h>
 #include <dataharvest/version.h>
+#include <doctest/doctest.h>
 
 #include <string>
 

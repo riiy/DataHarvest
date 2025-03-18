@@ -1,5 +1,5 @@
-#include <fmt/format.h>
 #include <dataharvest/dataharvest.h>
+#include <fmt/format.h>
 
 using namespace dataharvest;
 
